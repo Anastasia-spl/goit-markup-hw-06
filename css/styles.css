@@ -861,34 +861,50 @@ align-items: flex-end;
   color: var(--primary-text-color);
 }
 
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .modal-content .input {
   min-height: 40px;
   width: 100%;
   margin-bottom: 10px;
+  padding: 11px 12px 11px 42px;
+
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 
 .modal-content .input,
 .textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  /* color: var(--title-text-color); */
 }
 
 .modal-content .input:hover,
-.textarea:hover {
+.textarea:hover,
+.modal-content .input:focus,
+.textarea:focus {
+  outline: none;
   border-color: var(--accent-color);
-}
-
-.input-wrapper {
-  position: relative;
 }
 
 .modal-icon {
   position: absolute;
-  display: inline;
   top: 50%;
-  transform: translateY(-50);
+  left: 0px;
+  transform: translateY(-50%);
+  margin-left: 12px;
   width: 18px;
   height: 18px;
+  fill: var(--title-text-color);
+
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.input-wrapper:hover .modal-icon {
+  fill: var(--accent-color);
 }
 
 .textarea {
