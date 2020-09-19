@@ -117,6 +117,12 @@ img {
 /* header part */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  min-height: 80px;
   background-color: var(--white-color);
   border-bottom: 1px solid var(--line-color);
 }
@@ -203,6 +209,9 @@ img {
   background-image: url(../icons/envelope.svg);
   margin-right: 10px;
 } */
+
+
+
 
 /* Hero section */
 /* Бэкграунд цвет сменится на фоновую картинку */
@@ -633,7 +642,7 @@ align-items: flex-end;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-color: var(--accent-color);
+  border: none;
 
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -986,7 +995,7 @@ align-items: flex-end;
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-color: var(--accent-color);
+  border: none;
 
   font-family: Roboto, sans-serif;
   font-weight: 700;
