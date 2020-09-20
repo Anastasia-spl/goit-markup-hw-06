@@ -350,34 +350,32 @@
             </li>
           </ul>
         </div>
-        <div class="follow-wrap flexbox">
-          <form class="flexbox follow-aside" id="footer-contacts">
-            <label for="follow-us" class="follow-us-title"
-              >Подпишитесь на рассылку</label
-            >
+
+        <form class="flexbox mailing-aside" id="footer-contacts">
+          <div class="mailing-wrappar">
+            <b class="mailing-title">Подпишитесь на рассылку</b>
             <input
               type="email"
-              id="follow-us"
-              class="follow-us-input"
+              class="mailing-input"
               name="mailing"
               placeholder="E-mail"
             />
-          </form>
+          </div>
           <button type="submit" class="follow-btn">
             Подписаться
             <svg class="follow-icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-plane-send"></use>
             </svg>
           </button>
-        </div>
+        </form>
       </div>
     </footer>
-  </body>
-  <script>
-    const { height: pageHeaderHeight } = document
-      .querySelector(".header")
-      .getBoundingClientRect();
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector(".header")
+        .getBoundingClientRect();
 
-    document.body.style.paddingTop = `${pageHeaderHeight}px`;
-  </script>
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+  </body>
 </html>

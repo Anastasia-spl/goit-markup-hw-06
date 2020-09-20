@@ -211,14 +211,14 @@ img {
 } */
 
 
-
-
 /* Hero section */
 /* Бэкграунд цвет сменится на фоновую картинку */
 
 .hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--footer-bg-color);
-  padding: 200px 0;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -228,7 +228,9 @@ img {
   background-size: 1600px;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 200px 0;
 }
+
 
 .hero-block {
   max-width: 696px;
@@ -560,7 +562,7 @@ img {
 }
 
 .join,
-.follow-us-title {
+.mailing-title {
   display: block;
   margin-bottom: 20px;
 
@@ -572,6 +574,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -601,17 +604,17 @@ img {
   background-color: var(--accent-color);
 }
 
-.follow-wrap {
-align-items: flex-end;
-}
-
-.follow-aside {
+.mailing-wrappar {
+  display: flexbox;
   flex-direction: column;
-  align-items: flex-start;
   margin-right: 12px;
 }
 
-.follow-us-input {
+.mailing-aside {
+  align-items: flex-end;
+}
+
+.mailing-input {
   min-width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -620,9 +623,10 @@ align-items: flex-end;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+  color: var(--white-color);
 }
 
-.follow-us-input::placeholder {
+.mailing-input::placeholder {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -908,6 +912,10 @@ align-items: flex-end;
 .textarea:focus {
   outline: none;
   border-color: var(--accent-color);
+}
+
+.modal-content .input:not(:placeholder-shown):invalid {
+  border-color: tomato;
 }
 
 .modal-icon {

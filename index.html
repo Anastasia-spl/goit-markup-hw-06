@@ -555,26 +555,24 @@
             </li>
           </ul>
         </div>
-        <div class="follow-wrap flexbox">
-          <form class="flexbox follow-aside" id="footer-contacts">
-            <label for="follow-us" class="follow-us-title"
-              >Подпишитесь на рассылку</label
-            >
+
+        <form class="flexbox mailing-aside" id="footer-contacts">
+          <div class="mailing-wrappar">
+            <b class="mailing-title">Подпишитесь на рассылку</b>
             <input
               type="email"
-              id="follow-us"
-              class="follow-us-input"
+              class="mailing-input"
               name="mailing"
               placeholder="E-mail"
             />
-          </form>
+          </div>
           <button type="submit" class="follow-btn">
             Подписаться
             <svg class="follow-icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-plane-send"></use>
             </svg>
           </button>
-        </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-backdrop>
@@ -593,7 +591,15 @@
           <b class="leave-data">Оставьте свои данные, мы вам перезвоним</b>
           <label class="modal-label" for="name">Имя</label>
           <div class="input-wrapper">
-            <input class="input" type="text" id="name" name="name" required />
+            <input
+              class="input"
+              type="text"
+              placeholder=" "
+              pattern="^[А-Яа-яЁё\sa-zA-Z]+$"
+              id="name"
+              name="name"
+              required
+            />
             <svg class="modal-icon">
               <use href="./images/symbol-defs.svg#icon-person"></use>
             </svg>
@@ -603,6 +609,8 @@
             <input
               class="input"
               type="tel"
+              pattern="[0-9]{5,10}"
+              placeholder=" "
               id="tel"
               name="telephone"
               required
@@ -616,6 +624,7 @@
             <input
               class="input"
               type="email"
+              placeholder=" "
               id="email"
               name="email"
               required
